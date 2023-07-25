@@ -1,28 +1,15 @@
-import { EmotionRating } from "@/components/EmotionRating"
+import { StudentTable } from "@/components/StudentTable";
+import { students } from "@/datas/students";
 
-
-
-const Page = () =>{ 
-  
-  
-    const getHour = new Date()
-    let hora = getHour.toLocaleTimeString() 
-    // FALTA INCLUIR CONTAGEM AUTOMÁTICA 
-   
+const Page = () =>{
 
   return(
-      <div className="bg-blue-500  h-screen flex flex-col items-center justify-center">
-      <p className="text-8xl">{hora}</p>
-      <p className="text-5xl font-bold">
-        { hora >= '00:00' && hora < '12:00' && "Bom dia" }
-        { hora >= '12:00' && hora < '18:00' && "Boa tarde" }
-        { hora >= '18:00' && hora < '23:59' && "Boa Noite" }
-      </p>
-      <div >
-        <EmotionRating rate={3} />
-      </div>      
+    
+    <div className="container mx-auto" >
+      <h1 className="text-4xl mb-4" >LISTA DE ESTUDANTES</h1>
+      <StudentTable students={students} />
     </div>
-  )
+  );
 }
 
 export default Page

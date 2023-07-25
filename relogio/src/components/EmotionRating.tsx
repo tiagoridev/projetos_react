@@ -7,8 +7,9 @@ export const EmotionRating = ({ rate}: Props) => {
   if( rate < 0 ) rate = 0; // limita a nota em min de 0
 
   const rateInt = Math.floor(rate); // Arredonda nota para baixo
+  const emojis = ['', '😂', '😄', '😊', '😝', '😍'];
 
-  const face = '😄'.repeat(rateInt) + '😶'.repeat(5 - rateInt); // exibi a diferença total de faces
+  const face = `${emojis[rateInt]}`.repeat(rateInt)  + '😶'.repeat(5 - rateInt); // exibi a diferença total de faces
 
   return(
 
