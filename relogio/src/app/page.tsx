@@ -1,3 +1,5 @@
+import { EmotionRating } from "@/components/EmotionRating"
+
 
 
 const Page = () =>{ 
@@ -16,7 +18,9 @@ const Page = () =>{
         { hora >= '12:00' && hora < '18:00' && "Boa tarde" }
         { hora >= '18:00' && hora < '23:59' && "Boa Noite" }
       </p>
-      
+      <div >
+        <EmotionRating rate={3} />
+      </div>      
     </div>
   )
 }
